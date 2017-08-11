@@ -47,10 +47,17 @@
       <version>1.2</version>
     </dependency>
 
+    <!--<dependency>-->
+      <!--<groupId>javax.servlet</groupId>-->
+      <!--<artifactId>javax.servlet-api</artifactId>-->
+      <!--<version>3.1.0</version>-->
+    <!--</dependency>-->
+
     <dependency>
       <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>3.1.0</version>
+      <artifactId>jsp-api</artifactId>
+      <version>2.1</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -77,17 +84,17 @@
     <scope>provided</scope>
   </dependency>
 
-    <dependency>
-      <groupId>com.sparkjava</groupId>
-      <artifactId>spark-core</artifactId>
-      <version>2.2</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>com.sparkjava</groupId>-->
+      <!--<artifactId>spark-core</artifactId>-->
+      <!--<version>2.2</version>-->
+    <!--</dependency>-->
 
-    <dependency>
-      <groupId>com.sparkjava</groupId>
-      <artifactId>spark-template-freemarker</artifactId>
-      <version>2.0.0</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>com.sparkjava</groupId>-->
+      <!--<artifactId>spark-template-freemarker</artifactId>-->
+      <!--<version>2.0.0</version>-->
+    <!--</dependency>-->
 
     <dependency>
       <groupId>com.heroku.sdk</groupId>
@@ -113,26 +120,26 @@
       </plugin>
 
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>2.3</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals><goal>copy</goal></goals>
-            <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>com.github.jsimone</groupId>
-                  <artifactId>webapp-runner</artifactId>
-                  <version>8.5.11.3</version>
-                  <destFileName>webapp-runner.jar</destFileName>
-                </artifactItem>
-              </artifactItems>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-dependency-plugin</artifactId>
+      <version>2.3</version>
+      <executions>
+        <execution>
+          <phase>package</phase>
+          <goals><goal>copy</goal></goals>
+          <configuration>
+            <artifactItems>
+              <artifactItem>
+                <groupId>com.github.jsimone</groupId>
+                <artifactId>webapp-runner</artifactId>
+                <version>8.5.11.3</version>
+                <destFileName>webapp-runner.jar</destFileName>
+              </artifactItem>
+            </artifactItems>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
     </plugins>
   </build>
 </project>
